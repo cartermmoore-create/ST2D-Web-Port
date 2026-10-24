@@ -1,0 +1,18 @@
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Unity generated folders (if the project is added later)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+Build/
+Builds/
+
+# Do not commit Windows-only game binaries by accident
+*.exe
+*.dll
