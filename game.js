@@ -475,6 +475,10 @@
     }
   });
   overlaySecondary.addEventListener('click', () => {
+    if (mode === 'paused') {
+      startGame();
+      return;
+    }
     mode = 'menu';
     showOverlay('SLENDYTUBBIES 2D', 'A fan-made browser recreation of the dark exploration and custard-collecting gameplay. Find all 10 before the creature reaches you.', 'START GAME', '');
   });
