@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101116">
+  <meta name="description" content="Slendytubbies 2D browser port project.">
+  <title>Slendytubbies 2D — Web Port</title>
+  <style>
+    :root { color-scheme: dark; --bg:#101116; --panel:#191b23; --text:#f3f4f8; --muted:#a7aabb; --accent:#b7ef70; --line:#303340; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; background:radial-gradient(ellipse at 50% -20%,#303b2a 0,transparent 48%),var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif; display:grid; place-items:center; padding:24px; }
+    main { width:min(760px,100%); }
+    .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.18em; font-weight:800; font-size:.75rem; }
+    h1 { margin:.4rem 0 1rem; font-size:clamp(2rem,7vw,4.2rem); letter-spacing:-.055em; line-height:1.02; }
+    p { color:var(--muted); }
+    .panel { background:rgba(25,27,35,.92); border:1px solid var(--line); border-radius:18px; padding:clamp(20px,5vw,34px); box-shadow:0 24px 90px #0005; }
+    .status { display:inline-flex; align-items:center; gap:9px; border:1px solid #52623e; color:#dcffc0; border-radius:999px; padding:6px 11px; font-size:.85rem; font-weight:700; }
+    .dot { width:8px; height:8px; border-radius:100%; background:#b7ef70; box-shadow:0 0 12px #b7ef7080; }
+    h2 { margin:1.5rem 0 .25rem; font-size:1.15rem; }
+    a { color:var(--accent); }
+    code { background:#0d0e12; padding:2px 6px; border-radius:5px; color:#e8eaf2; }
+    footer { color:#747889; font-size:.85rem; margin-top:18px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Community port project</div>
+    <h1>Slendytubbies 2D<br>Web Port</h1>
+    <section class="panel">
+      <span class="status"><span class="dot"></span> Porting in progress</span>
+      <h2>Browser build not available yet</h2>
+      <p>This site is the home for the Slendytubbies 2D browser-port project. The supplied archive contains a Windows Unity player, which cannot run directly inside a browser.</p>
+      <p>To make the original game playable here, the original Unity project must be built for WebGL. Alternatively, the game would need to be recreated for the browser.</p>
+      <h2>What is needed next?</h2>
+      <p>The original Unity project, including scenes and scripts, or an already-exported WebGL build containing <code>index.html</code> and its generated <code>Build/</code> files.</p>
+      <p>Once a valid WebGL build is added, this landing page can be replaced with the game player.</p>
+    </section>
+    <footer>Unofficial fan port project. Not affiliated with the original game's creators.</footer>
+  </main>
+</body>
+</html>
