@@ -1,26 +1,39 @@
 # Slendytubbies 2D — Web Port
 
-This repository is the target for a browser-playable port of **Slendytubbies 2D**.
+This repository now contains a **playable, code-built browser recreation** of the core Slendytubbies 2D-style exploration loop.
 
-## Current source build
+## Play it
 
-The provided archive, `slendytubbies-2d-64bit.rar`, contains a Windows Unity player (`Slendytubbies 2D.exe`) and its `Slendytubbies 2D_Data` directory. It does **not** contain a Unity WebGL build (`index.html`, `Build/*.wasm`, `Build/*.data`, and loader/framework files).
+Open the published GitHub Pages site once the Pages workflow finishes deploying. The page runs in a modern browser and does not require a download or server-side runtime.
 
-A Windows `.exe` cannot be run directly on GitHub Pages. The game must be exported again from its original Unity project with **WebGL** as the target, or recreated/ported to browser technologies. The Windows player archive alone is not enough to create a faithful WebGL export.
+## Gameplay included
 
-## Next steps
-
-1. Obtain the original Unity project (including scenes, scripts, packages, and source assets).
-2. Open it in a compatible Unity version and install the WebGL Build Support module.
-3. Test the project in Unity's WebGL player, resolving any plugins or networking features that WebGL does not support.
-4. Export the WebGL build.
-5. Copy the generated `index.html`, `Build/`, and `TemplateData/` files into this repository (or configure the build output folder as the site root).
-6. Enable GitHub Pages for the `main` branch and root folder.
+- Top-down dark forest map with a moving camera
+- Flashlight cone and low-visibility atmosphere
+- Ten custards to find
+- A creature that follows the player
+- Sprint stamina, pause/restart, a mini-map and win/lose states
+- Keyboard controls and touch buttons on compatible devices
+- Procedural canvas graphics; no external images or libraries are required
 
 ## Controls
 
-See the original game's `Controls-Controles.txt` when available. Browser controls will be documented here after the web build is playable.
+| Action | Input |
+|---|---|
+| Move | WASD or arrow keys |
+| Run | Hold Shift |
+| Toggle flashlight | Space |
+| Toggle map | M |
+| Pause | Esc |
 
-## Status
+On touch devices, use the on-screen directional pad and action buttons.
 
-**Not yet playable in the browser.** This repository currently documents the required porting path; it does not claim that the Windows executable has been converted.
+## Important: what this port is
+
+The supplied `slendytubbies-2d-64bit.rar` is a **compiled Windows Unity player**, not the original Unity project and not a WebGL build. A Windows executable and its data folder cannot simply be converted into a browser build. A faithful conversion of the original game requires the Unity project (scenes, scripts, project settings and dependencies) so it can be built using Unity's WebGL target.
+
+Therefore, the current site is an original, code-built browser recreation of the core gameplay idea. It is **not** the original Unity game, does not include the original game assets, and does not yet reproduce every original mode or feature. If the original Unity project or a Unity WebGL export becomes available, it can replace this prototype.
+
+## Deployment
+
+A GitHub Actions workflow is included at `.github/workflows/pages.yml`. In the repository's Settings → Pages, set the deployment source to **GitHub Actions** if it is not already enabled. Each push to `main` triggers deployment.
